@@ -62,7 +62,7 @@ void put(HashMap* map, KEY key, VALUE val) {
 VALUE get(HashMap* map, KEY key) {
     int hashvalue = hash(key);
     if (map->items[hashvalue] == NULL) 
-        return NULL;
+        return -1;
     if (map->items[hashvalue]->next == NULL)
         return map->items[hashvalue]->value->value;
     
@@ -73,7 +73,7 @@ VALUE get(HashMap* map, KEY key) {
         node = node->next;
     }
 
-    return NULL;
+    return -1;
 }
 
 int main() {

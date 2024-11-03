@@ -9,7 +9,7 @@ reset:
 run-hashmap:
 	ninja -C build
 ifeq ($(OS),Windows_NT)
-	.\HASHMAP.exe
+	.\bin\HASHMAP.exe
 else
-	./HASHMAP.exe
+	./bin/HASHMAP.exe
 endif
